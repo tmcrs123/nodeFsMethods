@@ -9,7 +9,8 @@ module.exports = function (destination, nDays) {
 
   filesInMovedFolder.forEach((file) => {
     const copyToPath = `${destination}/${file}`;
-    const pastDate = Date.now() - nDays * ms1Day; // X days ago    
+    const pastDate = Date.now() - nDays * ms1Day; // X days ago
+
 
     // On moved folder, delete files older than 3 days that don't have a _keep tag
     fs.stat(copyToPath, (err, stats) => {
@@ -17,7 +18,7 @@ module.exports = function (destination, nDays) {
 
       if (stats.mtimeMs < pastDate) {
         console.log(`Removing file ${file}`);
-        fs.unlink(file, (err) => {
+        fs.unlink(copyToPath, (err) => {
           if (err) throw err;
         });
       }

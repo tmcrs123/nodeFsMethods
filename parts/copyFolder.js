@@ -4,8 +4,7 @@ const copyFile = require('./copyFile');
 
 module.exports = function(sourceFolder,destinationFolder,folderName){
 
-const copiedFolder = path.join(destinationFolder,folderName)
-
+const copiedFolder = path.join(destinationFolder,folderName);
 
 //check if the folder exists and if it doesn't create a new folder
 if(!fs.existsSync(copiedFolder)){
@@ -21,3 +20,9 @@ copiedFolderFiles.forEach((file) => {
     copyFile(sourceFolderPath,copiedFolder,file);
 })
 }
+
+
+/**
+ * 
+ * Can my copy a entire folder with items and folders a recursive pattern?
+ */

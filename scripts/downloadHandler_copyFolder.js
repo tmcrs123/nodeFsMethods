@@ -15,9 +15,7 @@ module.exports = function copyFolderRecursive(sourcePath, destinationPath,filety
         const destination = path.join(destinationPath,item);
          
         if(fs.lstatSync(curPath).isDirectory()){
-            if(!fs.existsSync(destination)){
-                fs.mkdirSync(destination);
-            }
+            
             copyFolderRecursive(curPath,destination,filetypes);
         } else {
             let lastFile = (items.length-1 === index);

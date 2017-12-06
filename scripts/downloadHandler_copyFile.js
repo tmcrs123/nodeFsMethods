@@ -1,5 +1,6 @@
 const fs = require("fs");
 const path = require("path");
+const createFoldersCascade = require('./downloadHandler_createFoldersCascade.js');
 
 module.exports = function(readFromPath,copyToPath,filename,lastFile,filetypes) {
   
@@ -9,7 +10,9 @@ module.exports = function(readFromPath,copyToPath,filename,lastFile,filetypes) {
 
   //if correct file type copy
   if (shouldCopyFile) {
-      console.log('copying file ' , filename);
+    
+    createFoldersCascade(path.parse(copyToPath).dir);
+
     const readStream = fs.createReadStream(readFromPath);
     const writeStream = fs.createWriteStream(copyToPath);
     

@@ -11,16 +11,21 @@ module.exports = function copyFolderRecursive(sourcePath, destinationPath) {
         const curPath = path.join(sourcePath,item);
         const destination = path.join(destinationPath,item);
 
+        // console.log('fn source'  , copyFolderRecursive.source);
+        // console.log('passed source' , sourcePath);
+        // console.log(copyFolderRecursive.source === sourcePath);
+         
+
         if(fs.lstatSync(curPath).isDirectory()){
             if(!fs.existsSync(destination)){
                 fs.mkdirSync(destination);
-                // console.log(`Creating a new folder in ${destination}`);
+                console.log(`Creating a new folder in ${destination}`);
             }
-            copyFolderRecursive(curPath,destination);
+            copyFolderRecursive(curPath,destination,sourcePath);
         } else {
-            let lastFile = (items.length-1 === index && path.parse(curPath).dir !== copyFolderRecursive.source);
-            console.log(`item ${item} is last file? ${lastFile}`);
-            copyFile(curPath,destination,item,lastFile);        
+            let lastFile = (items.length-1 === index && copyFolderRecursive.source != sourcePath);
+            // console.log('passing to copy file file: ' , curPath , lastFile);
+            copyFile(curPath,destination,item,lastFile,sourcePath);        
         }
 
     })

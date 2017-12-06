@@ -6,6 +6,7 @@ module.exports = function removeFolderRecursive(dirpath){
         fs.readdirSync(dirpath).forEach((item) => {
             let curPath = path.join(dirpath,item);
             if(fs.lstatSync(curPath).isDirectory()){
+                console.log('Removing folder at' , curPath);
                 removeFolderRecursive(curPath)
             } else {
                 fs.unlinkSync(curPath)

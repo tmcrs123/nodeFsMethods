@@ -6,10 +6,10 @@ module.exports = function(path){
 
     pathArr.reduce((root,current) => {
         if(!fs.existsSync(`${root}/${current}`)){
-            console.log(`Creating folder in ${root}/${current}`);
+            // console.log(`Creating folder in ${root}/${current}`);
             fs.mkdirSync(`${root}/${current}`);
         } else{
-            console.log(`Path ${root}/${current} already exists`);
+            // console.log(`Path ${root}/${current} already exists`);
         } 
         return `${root}/${current}`;
     });

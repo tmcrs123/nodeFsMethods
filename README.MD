@@ -12,6 +12,8 @@ Tiago
 
 <h2>Video Example</h2>
 
+<img src="https://i.imgur.com/JGVACmo.gifv"/>
+
 
 <img src="https://i.imgur.com/H26nI8e.gif"/>
 

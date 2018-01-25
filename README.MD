@@ -13,10 +13,10 @@ Tiago
 <h2>Video Example</h2>
 
 
-<img src="https://i.imgur.com/JGVACmo.gif" />
+<img src="https://i.imgur.com/JGVACmo.gif"/>
 
 
-<img src="https://i.imgur.com/H26nI8e.gif" />
+<img src="https://i.imgur.com/H26nI8e.gif"/>
 
 
 <h2>Usage</h2>

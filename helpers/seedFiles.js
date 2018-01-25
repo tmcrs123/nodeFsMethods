@@ -5,12 +5,6 @@ const lorem = 'Bacon ipsum dolor amet burgdoggen shoulder andouille ham hock ham
 const ms1Day = 24*60*60*1000;
 
 
-//make this timer work
-// console.time('createBigFiles');
-// process.nextTick(() => console.timeEnd('createBigFiles'));
-
-
-
 /**
  * Seed files
  */
@@ -49,7 +43,6 @@ writeStreams.forEach((writeStream,index) => {
     
     writeStream.on('error', (err) => {
         console.error(err);
-        console.log('Destryoing stream');
         write.destroy(err);
     })
 

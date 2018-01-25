@@ -16,9 +16,6 @@ Tiago
 <img src="https://i.imgur.com/H26nI8e.gif"/>
 
 
-<img src="https://i.imgur.com/H26nI8e.gif"/>
-
-
 <h2>Usage</h2>
 
 The args of the downloadHandler.js script are as follows:

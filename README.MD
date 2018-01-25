@@ -13,7 +13,7 @@ Tiago
 <h2>Video Example</h2>
 
 
-[Imgur](https://i.imgur.com/JGVACmo.gifv)
+<img src="https://i.imgur.com/H26nI8e.gif"/>
 
 
 <img src="https://i.imgur.com/H26nI8e.gif"/>
